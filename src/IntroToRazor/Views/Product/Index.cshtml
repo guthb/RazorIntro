@@ -5,7 +5,7 @@
 }
 
 <div class="page-header">
-    <h1>Product <small> products I love to  use</small></h1> 
+    <h1>Products <small> products I love to  use</small></h1> 
 </div>
 
 
@@ -17,7 +17,7 @@
             @{foreach (var product in ViewBag.Products)
                 {
                     //reviewing the Product class for the data fields from the migration
-                    <li class="list-group-item">@product.Name @product.Descroiption @product.Price</li>               
+                    <li class="list-group-item">@product.Name @product.Description @product.Price</li>               
                 }
             }
         </ul>
