@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>my product page</title>
+    <!--.
+    <link rel="stylesheet" type="text/css" href="style.css"> ..-->
+  </head>
+  <body>
+    <style scoped>
+      body { background-color: slategray; }
+    </style>
+
+    <h1>Product Entry</h1>
+
+    <style>
+      h1 {margin: 0 auto;text-align: center;}
+    </style>
+
+    <form action="products" method="post">
+      <div class="inputs">
+        <label for = "productName">Product Name:</label>
+        <input type = "text" id = "productName" productName="product_name" />
+      </div>
+      <div>
+        <label for = "productDesc">Product Description:</label>
+        <textarea id ="prodDesc" name = "productDesc"></textarea>
+      </div>
+      <div>
+        <label for = "prodPrice">Product Price: $</label>
+        <input type = "number" id ="productPrice" prodPrice = "product_price" />
+      </div>
+
+      <div class ="button">
+        <button type="submit">Save Product</button>
+        <button><a href="products.html">Products</a></button>
+      </div>
+    </form>
+    <style>
+      form {
+           /* Just to center the form on the page */
+            margin: 0 auto;
+            width: 400px;
+            /* To see the outline of the form */
+            padding: 1em;
+            border: 1px solid #CCC;
+            border-radius: 1em;
+          }
+    </style>
+
+    <style>
+      form div + div {margin-top: 1em;}
+    </style>
+    <style>
+        input, textarea {
+            /* To make sure that all text fields have the same font settings
+               By default, textareas have a monospace font */
+            font: 1em sans-serif;
+
+            /* To give the same size to all text field */
+            width: 300px;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+            /* To harmonize the look & feel of text field border */
+            border: 1px solid #999;
+        }
+        input:focus, textarea:focus {
+            /* To give a little highlight on active elements */
+            border-color: #000;
+        }
+
+        textarea {
+            /* To properly align multiline text fields with their labels */
+            vertical-align: top;
+
+            /* To give enough room to type some text */
+            height: 5em;
+
+            /* To allow users to resize any textarea vertically
+               It does not work on all browsers */
+            resize: vertical;
+        }
+
+        .button {
+            /* To position the buttons to the same position of the text fields */
+            padding-left: 90px; /* same size as the label elements */
+        }
+        button {
+            /* This extra margin represent roughly the same space as the space
+               between the labels and their text fields */
+            margin-left: .5em;
+        }
+    </style>
+  </body>
+</html>
