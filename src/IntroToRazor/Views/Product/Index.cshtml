@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="page-header">
+    <h1>Product <small> products I love to  use</small></h1> 
+</div>
+
+
+<div class="row">
+    <div class="col-md-6">
+        <h3>All Products</h3>
+        <ul class="list-group">
+            @*razor access data for UI presentation*@
+            @{foreach (var product in ViewBag.Products)
+                {
+                    //reviewing the Product class for the data fields from the migration
+                    <li class="list-group-item">@product.Name @product.Descroiption @product.Price</li>               
+                }
+            }
+        </ul>
+
+        @*area on the page to be invoked, controller to called , action to be performed *@
+        <a asp-area="" asp-controller="Product" asp-action="Add" class="btn btn-primary">Add new Product</a>  
+    </div>
+    <div class="col-md-6">
+        <h3>Some Product Details</h3>
+        <div class="well">
+            Lanyard jib dance the hempen jig black spot run a shot across the bow yo-ho-ho mizzenmast marooned poop deck dead men tell no tales pressgang run a rig Jolly Roger log no prey, no pay nipper walk the plank swing the lead careen me crow's nest chantey landlubber or just lubber plunder Spanish Main quarter furl brigantine chase spirits topsail brig hang the jib coxswain American Main Brethren of the Coast main sheet maroon gun ahoy. Long clothes hulk dance the hempen jig splice the main brace. 
+        </div>
+    </div>
+</div>
+
+
