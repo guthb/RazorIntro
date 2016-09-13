@@ -33,6 +33,7 @@ namespace IntroToRazor.DAL
         public void AddProduct (Product product)
         {
             database.Products.Add(product);
+            database.SaveChanges();
         }
 
         public void EditProduct (Product product)
